@@ -1,0 +1,16 @@
+{"episode_index": 0, "tasks": ["Grab Left Batter"], "length": 223}
+{"episode_index": 1, "tasks": ["Pour Left Batter"], "length": 687}
+{"episode_index": 2, "tasks": ["Drop Left Batter"], "length": 257}
+{"episode_index": 3, "tasks": ["Close Left Lid"], "length": 384}
+{"episode_index": 4, "tasks": ["Open Left Lid"], "length": 350}
+{"episode_index": 5, "tasks": ["Grab Fork"], "length": 257}
+{"episode_index": 6, "tasks": ["Get Left Waffle"], "length": 314}
+{"episode_index": 7, "tasks": ["Drop Waffle"], "length": 232}
+{"episode_index": 8, "tasks": ["Drop Fork"], "length": 355}
+{"episode_index": 9, "tasks": ["Goto Initial position"], "length": 128}
+{"episode_index": 10, "tasks": ["Grab Right Batter"], "length": 207}
+{"episode_index": 11, "tasks": ["Pour Right Batter"], "length": 588}
+{"episode_index": 12, "tasks": ["Drop Right Batter"], "length": 264}
+{"episode_index": 13, "tasks": ["Close Right Lid"], "length": 374}
+{"episode_index": 14, "tasks": ["Open Right Lid"], "length": 417}
+{"episode_index": 15, "tasks": ["Get Right Waffle"], "length": 267}

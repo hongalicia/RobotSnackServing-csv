@@ -1,0 +1,59 @@
+#Initialize
+conda activate franka_ros2
+cd franka_ros2_ws/
+source install/setup.sh
+
+#robot_ip
+robot_ip:=172.16.0.2
+
+#example_controllers
+#robot_ip aleady defined in franka_ros2_ws/src/franka_bringup/config/franka.config.yaml
+ros2 launch franka_bringup example.launch.py controller_name:=move_to_start_example_controller
+ros2 launch franka_bringup example.launch.py controller_name:=joint_impedance_example_controller
+#load_gripper: "true"
+ros2 launch franka_bringup example.launch.py controller_name:=gripper_example_controller
+
+#--------------------------------franka_joint_logger.py-----------------------------------
+ros2 launch franka_bringup example.launch.py controller_name:=joint_trajectory_controller
+
+conda deactivate
+source /opt/ros/humble/setup.bash
+source ~/franka_ros2_ws/install/setup.bash
+python3 ~/franka_ros2_ws/franka_joint_logger.py
+#------------------------------------------------------------------------------------------
+
+#-------------------franka_ptp.py----------------------------
+ros2 launch franka_bringup example.launch.py controller_name:=joint_trajectory_controller
+
+conda deactivate
+source /opt/ros/humble/setup.bash
+source ~/franka_ros2_ws/install/setup.bash
+python3 franka_ptp.py
+#------------------------------------------------------------------------------------------
+
+#--------------------franka_gripper_control.py-------------------
+ros2 launch franka_gripper gripper.launch.py   robot_ip:=172.16.0.2   namespace:=NS_1
+conda deactivate
+source /opt/ros/humble/setup.bash
+source ~/franka_ros2_ws/install/setup.bash
+python3 franka_gripper_control.py
+#------------------------------------------------------------------------------------------
+
+#-----------------franka_joint+gripper_control-----------------
+ros2 launch franka_gripper gripper.launch.py   robot_ip:=172.16.0.2   namespace:=NS_1
+ros2 launch franka_bringup example.launch.py controller_name:=joint_trajectory_controller
+
+conda deactivate
+source /opt/ros/humble/setup.bash
+source ~/franka_ros2_ws/install/setup.bash
+python3 franka_joint_gripper_control.py
+#------------------------------------------------------------------------------------------
+
+
+//ROS2
+source /opt/ros/humble/setup.bash
+source ~/franka_ros2_ws/install/setup.bash
+ros2 topic echo --once /NS_1/joint_states  //check joint	
+ros2 topic list | grep joint  (check /joint_states)
+ros2 launch franka_bringup example.launch.py controller_name:=joint_trajectory_controller
+

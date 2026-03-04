@@ -1,0 +1,6 @@
+pip uninstall -y opencv-python opencv-contrib-python opencv-python-headless
+
+sudo apt update
+sudo apt install -y python3-opencv ffmpeg \
+  gstreamer1.0-plugins-ugly gstreamer1.0-libav
+

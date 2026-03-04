@@ -1,0 +1,193 @@
+{
+    "robot_type": "tm-5s",
+    "codebase_version": "v2.1",
+    "total_episodes": 4,
+    "total_frames": 863,
+    "total_tasks": 1,
+    "total_videos": 8,
+    "total_chunks": 1,
+    "chunks_size": 1000,
+    "fps": 30,
+    "splits": {
+        "train": "0:4"
+    },
+    "data_path": "data/chunk-{episode_chunk:03d}/episode_{episode_index:06d}.parquet",
+    "video_path": "videos/chunk-{episode_chunk:03d}/{video_key}/episode_{episode_index:06d}.mp4",
+    "features": {
+        "action": {
+            "dtype": "float32",
+            "shape": [
+                12
+            ],
+            "names": [
+                "motor_0",
+                "motor_1",
+                "motor_2",
+                "motor_3",
+                "motor_4",
+                "motor_5",
+                "motor_6",
+                "motor_7",
+                "motor_8",
+                "motor_9",
+                "motor_10",
+                "motor_11"
+            ]
+        },
+        "observation.state": {
+            "dtype": "float32",
+            "shape": [
+                12
+            ],
+            "names": [
+                "motor_0",
+                "motor_1",
+                "motor_2",
+                "motor_3",
+                "motor_4",
+                "motor_5",
+                "motor_6",
+                "motor_7",
+                "motor_8",
+                "motor_9",
+                "motor_10",
+                "motor_11"
+            ]
+        },
+        "timestamp": {
+            "dtype": "float32",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "episode_index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "frame_index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "task_index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "observation.images.head": {
+            "dtype": "video",
+            "shape": [
+                480,
+                640,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channel"
+            ],
+            "video_info": {
+                "video.fps": 30,
+                "video.codec": "fmp4",
+                "video.pix_fmt": "rgb",
+                "video.is_depth_map": false,
+                "has_audio": false
+            }
+        },
+        "observation.images.left": {
+            "dtype": "video",
+            "shape": [
+                480,
+                640,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channel"
+            ],
+            "video_info": {
+                "video.fps": 30,
+                "video.codec": "fmp4",
+                "video.pix_fmt": "rgb",
+                "video.is_depth_map": false,
+                "has_audio": false
+            }
+        },
+        "observation.images.right": {
+            "dtype": "video",
+            "shape": [
+                480,
+                640,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channel"
+            ],
+            "video_info": {
+                "video.fps": 30,
+                "video.codec": "fmp4",
+                "video.pix_fmt": "rgb",
+                "video.is_depth_map": false,
+                "has_audio": false
+            }
+        },
+        "observation.images.side": {
+            "dtype": "video",
+            "shape": [
+                480,
+                640,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channel"
+            ],
+            "video_info": {
+                "video.fps": 30,
+                "video.codec": "fmp4",
+                "video.pix_fmt": "rgb",
+                "video.is_depth_map": false,
+                "has_audio": false
+            }
+        },
+        "observation.images.sider": {
+            "dtype": "video",
+            "shape": [
+                480,
+                640,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channel"
+            ],
+            "video_info": {
+                "video.fps": 30,
+                "video.codec": "fmp4",
+                "video.pix_fmt": "rgb",
+                "video.is_depth_map": false,
+                "has_audio": false
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+ros2 launch tm_driver dual_tm.launch.py
+
+conda activate isaac-groot-ros2
+source /opt/ros/humble/setup.bash
+source ~/tm2_ws/install/setup.bash
+
+
